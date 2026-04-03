@@ -1,11 +1,23 @@
 import React from 'react'
 import type { MediaEntity } from '@vasic-digital/media-types'
 
+/**
+ * Props for the EntityCard component.
+ */
 export interface EntityCardProps {
+  /** The media entity to display. */
   entity: MediaEntity
+  /** Optional callback when the card is clicked or activated via keyboard. */
   onClick?: (entity: MediaEntity) => void
 }
 
+/**
+ * Clickable card displaying a media entity's title with year, humanized type
+ * name, star rating, and a truncated description. Keyboard accessible via
+ * Enter and Space keys.
+ *
+ * @param props - EntityCardProps
+ */
 export const EntityCard: React.FC<EntityCardProps> = ({ entity, onClick }) => {
   const mediaType = entity.media_type?.name ?? 'unknown'
   const year = entity.year ? ` (${entity.year})` : ''

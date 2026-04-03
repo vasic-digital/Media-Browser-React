@@ -3,22 +3,45 @@ import type { MediaEntity, MediaType } from '@vasic-digital/media-types'
 import { TypeSelector } from './TypeSelector'
 import { EntityGrid } from './EntityGrid'
 
+/**
+ * Props for the EntityBrowser component.
+ */
 export interface EntityBrowserProps {
+  /** Available media types for the type selector. */
   types: MediaType[]
+  /** Entities to display in the grid. */
   entities: MediaEntity[]
+  /** Total number of entities matching the current filter (for pagination). */
   total: number
+  /** Page size. */
   limit: number
+  /** Current offset into the result set. */
   offset: number
+  /** Currently selected media type filter. */
   selectedType?: string
+  /** Current search query string. */
   searchQuery?: string
+  /** Shows a loading state when true. */
   isLoading?: boolean
+  /** Called when a media type pill is selected. */
   onTypeSelect: (typeName: string) => void
+  /** Called when the user submits a search query. */
   onSearch: (query: string) => void
+  /** Called when an entity card is clicked. */
   onEntityClick: (entity: MediaEntity) => void
+  /** Called when the user navigates to a different page. */
   onPageChange: (page: number) => void
+  /** Optional callback to navigate back; renders a back button when provided. */
   onBack?: () => void
 }
 
+/**
+ * Full-featured media entity browser with a search bar, type selector, and
+ * paginated entity grid. Shows the TypeSelector when no filter is active,
+ * switches to EntityGrid when a type or search query is selected.
+ *
+ * @param props - EntityBrowserProps
+ */
 export const EntityBrowser: React.FC<EntityBrowserProps> = ({
   types,
   entities,
