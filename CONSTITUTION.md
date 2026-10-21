@@ -9,3 +9,5 @@ constitution from any nested depth via its `find_constitution.sh` helper
 project-agnostic per §11.4.28).
 
 Canonical reference: https://github.com/HelixDevelopment/HelixConstitution
+
+Dependency manifest: see `helix-deps.yaml` (§11.4.31 Submodule-Dependency-Manifest).

@@ -33,3 +33,5 @@ function App() {
 ## License
 
 MIT
+
+Dependency manifest: see `helix-deps.yaml` (§11.4.31 Submodule-Dependency-Manifest).

@@ -1,0 +1,9 @@
+# §11.4.31 Submodule-Dependency-Manifest — own-org deps resolved from the parent
+# project ROOT (never nested own-org submodules; §11.4.28(C)).
+schema_version: 1
+deps:
+  - { name: Media-Types-TS,           ssh_url: git@github.com:vasic-digital/Media-Types-TS.git,           ref: main, why: "shared media types, @vasic-digital/media-types file dependency", layout: flat }
+transitive_handling:
+  recursive: true
+  conflict_resolution: operator-required
+language_specific_subtree: false

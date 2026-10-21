@@ -12,3 +12,5 @@ Canonical reference: https://github.com/HelixDevelopment/HelixConstitution
 
 ## Submodule-Specific Notes
 <!-- Add submodule-specific AI agent guidance here -->
+
+Dependency manifest: see `helix-deps.yaml` (§11.4.31 Submodule-Dependency-Manifest).
